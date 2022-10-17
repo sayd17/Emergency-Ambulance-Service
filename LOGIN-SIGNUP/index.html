@@ -1,11 +1,22 @@
 <!DOCTYPE html>
+
 <head>
     <meta name="viewport" content="device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title> Login / Sign Up Form </title>
     <link rel="stylesheet" href="./src/main.css">
+    <style>
+        #user:checked~.user {
+            display: block;
+        }
+
+        #driver:checked~.driver {
+            display: block;
+        }
+    </style>
 
 </head>
+
 <body>
     <div class="container">
         <form class="form" id="login">
@@ -21,58 +32,101 @@
             </div>
 
             <div class="form__input-group">
-            
-                <input type="radio" id="normalUser" name="User" value="normalUser">
+
+                <input type="radio" id="user" name="User" value="User">
                 User
-                <input type="radio" id="Driver" name="User" value="Driver">
+                <input type="radio" id="driver" name="User" value="Driver">
                 Driver
             </div>
 
             <button class="form__button" type="submit"> Confirm </button>
             <p class="form__text">
-                <a href="#" class="form__link">Forgot your password?</a>    
+                <a href="#" class="form__link">Forgot your password?</a>
             </p>
             <p class="form__text">
                 Don't have any account?
-                <a class="form__link" href="#" id="linkCreateAccount"  >Create account</a>     
+                <a class="form__link" href="#" id="linkCreateAccount">Create account</a>
             </p>
             <br> <button class="form__button" type="button"><b> Call Right Now!  </b></button>
         </form>
 
+        <!-- Create account section                            -->
+
         <form class="form form--hidden" id="createAccount">
             <h1 class="form__title">Create Account</h1>
-            <!--
-                <div class="form__message form__message--error"></div>
             <div class="form__input-group">
-                <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
-                <div class="form__input-error-message"></div>
-            </div>
-            <div class="form__input-group">
-                <input type="text" class="form__input" autofocus placeholder="Email Address">
-                <div class="form__input-error-message"></div>
-            </div>
-        
-            <div class="form__input-group">
-                <input type="password" class="form__input" autofocus placeholder="Password">
-                <div class="form__input-error-message"></div>
-            </div>
-            <div class="form__input-group">
-                <input type="password" class="form__input" autofocus placeholder="Confirm password">
-                <div class="form__input-error-message"></div>
-            </div>
-            
-            -->
-            <div class="form__input-group">
-            
-                <input type="radio" id="normalUser" name="User" value="normalUser">
-                User
-                <input type="radio" id="Driver" name="User" value="Driver">
+                <h2 class="form_title">Select User Type:</h2>
+                <input type="radio" id="user" name="data"> User
+
+                <input type="radio" id="driver" name="data">
                 Driver
+
+                <!-- Start of user section  -->
+                <div class="user" hidden>
+                    <div class="form__message form__message--error"></div>
+                    <div class="form_input-group">
+
+                        <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
+                        <div class="form__input-error-message"></div>
+                    </div>
+                    <div class="form__input-group">
+                        <input type="text" class="form__input" autofocus placeholder="Email Address">
+                        <div class="form__input-error-message"></div>
+                    </div>
+
+                    <div class="form__input-group">
+                        <input type="password" class="form__input" autofocus placeholder="Password">
+                        <div class="form__input-error-message"></div>
+                    </div>
+                    <div class="form__input-group">
+                        <input type="password" class="form__input" autofocus placeholder="Confirm password">
+                        <div class="form__input-error-message"></div>
+
+                    </div>
+                    <button class="form__button" type="submit"> Confirm </button>
+                </div>
+                <!-- End of user section  -->
+                <!-- Starting Driver section  -->
+                <div class="driver" hidden>
+                    <div class="form__message form__message--error"></div>
+
+                    <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Driver Username">
+                    <div class="form__input-error-message"></div>
+
+                    <div class="form__input-group">
+                        <input type="text" class="form__input" autofocus placeholder="Driver Email Address">
+                        <div class="form__input-error-message"></div>
+                    </div>
+                    <div class="form__input-group">
+                        <input type="text" class="form__input" autofocus placeholder="Enter Driving License">
+                        <div class="form__input-error-message"></div>
+                    </div>
+
+
+                    <div class="form__input-group">
+                        <input type="password" class="form__input" autofocus placeholder="Driver Password">
+                        <div class="form__input-error-message"></div>
+                    </div>
+                    <div class="form__input-group">
+                        <input type="password" class="form__input" autofocus placeholder="Confirm Driver password">
+                        <div class="form__input-error-message"></div>
+
+                    </div>
+                    <button class="form__button" type="submit"> Confirm </button>
+
+                </div>
             </div>
-            <button class="form__button" type="submit"> Confirm </button>
+            <!-- End of driver section  -->
+
+
+
+
+
+
+
             <p class="form__text">
-                Already have an account? 
-                <a class="form__link" href="#" id="linkLogin"  >Sign in</a>     
+                Already have an account?
+                <a class="form__link" href="#" id="linkLogin">Sign in</a>
             </p>
         </form>
     </div>
