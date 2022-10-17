@@ -13,7 +13,7 @@ body{
     align-items: left;
     justify-content: left;
     font-size: 18px;
-    background: url(./img/bg4.jpg);
+    background: url(/DRIVER-DASHBOARD/assets/img/bg4.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
