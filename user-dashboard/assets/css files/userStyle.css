@@ -84,6 +84,7 @@ body{
     left: 1280px;
     background: rgb(157, 171, 167);
     border-radius: 3px;
+    transition-delay: 4s;
     
 }
 
