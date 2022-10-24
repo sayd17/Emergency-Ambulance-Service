@@ -130,3 +130,20 @@ body{
 .form__link:hover {
     text-decoration: underline;
 }
+.inner-box{
+    padding:20px;
+}
+.box h3{
+    text-align: center;
+    margin:5px 0px;
+}
+.box{
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    background-color: white;
+
+}
+.link{
+    color:#00aced ;
+}
