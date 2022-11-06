@@ -19,7 +19,7 @@
 
 <body>
     <div class="container">
-        <form class="form" id="login">
+        <form class="form" id="login" action="/LOGIN-SIGNUP/src/connect.php" method="post">
             <h1 class="form__title">Login</h1>
             <div class="form__message form__message--error"></div>
             <div class="form__input-group">
@@ -41,22 +41,18 @@
 
             <button class="form__button" type="submit"> Confirm </button>
             <p class="form__text">
-<<<<<<< HEAD
                 <a href="/forgot.html/forgot.html" class="form__link">Forgot your password?</a>
-=======
-                <a href="/Emergency-Ambulance-Service/forgot.html/forgot.html" class="form__link">Forgot your password?</a>
->>>>>>> 5ede7e94512de335d3920047502b16dfc712fc0e
             </p>
             <p class="form__text">
                 Don't have any account?
                 <a class="form__link" href="#" id="linkCreateAccount">Create account</a>
             </p>
-            <br> <button class="form__button" type="button"><b> Call Right Now!  </b></button>
+            <br> <a href="/USER-DASHBOARD/userDashboard.html" class="form__link"><button class="form__button" type="button"><b> Call Right Now!  </b></button></a>
         </form>
 
         <!-- Create account section                            -->
 
-        <form class="form form--hidden" id="createAccount" action="connect.php" method="post">
+        <form class="form form--hidden" id="createAccount" action="/LOGIN-SIGNUP/src/connect.php" method="post">
             <h1 class="form__title">Create Account</h1>
             <div class="form__input-group">
                 <h2 class="form_title">Select User Type:</h2>
@@ -79,7 +75,7 @@
                     </div>
 
                     <div class="form__input-group">
-                        <input type="password" class="form__input" autofocus placeholder="Enter password" name="password">
+                        <input type="password" class="form__input" autofocus placeholder="Enter password" name="pass">
                         <div class="form__input-error-message"></div>
                     </div>
                     <div class="form__input-group">
@@ -121,7 +117,7 @@
                         <div class="form__input-error-message"></div>
 
                     </div>
-                    <button class="form__button" type="submit"> Confirm </button>
+                    <button class="form__button" name="signup" type="submit"> Confirm </button>
 
                 </div>
             </div>

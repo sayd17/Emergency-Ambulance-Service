@@ -1,7 +1,7 @@
 <?php
     $userName = $_POST['userName'];
     $emailAddress = $_POST['emailAddress'];
-    $password = $_POST['password']; 
+    $pass = $_POST['pass']; 
     $driverName = $_POST['driverName'];
     $driverEmail = $_POST['driverEmail'];
     $driverNID = $_POST['driverNID'];
@@ -9,7 +9,7 @@
     $driverPassword = $_POST['driverPassword'];  
 
     // database connection 
-    $conn = new mysqli('localhost','root','','registraioninfo');
+    $conn = new mysqli('localhost','root','','emergency_ambulance_service');
     if($conn->connect_error){
         die('Connection Failed : '.$conn->connect_error);
     }else{
@@ -19,5 +19,12 @@
         echo "Registration Successfull";
         $stmt->close();
         $conn->close();
+    }
+
+    if(isset($_POST['signup']))
+    {
+        $id = $_POST['id'];
+
+        $query = "UPDATE 'user' SET userName = '$_POST[userName]' emailAddress = '$_POST[emailAddress]' pass = '$_POST[pass]'"
     }
 ?>
